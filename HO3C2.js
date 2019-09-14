@@ -1,0 +1,10 @@
+var  floatAge, floatDays, floatMonths, intWeeks, intFortnights;
+     floatAge = parseFloat(prompt("What is your current age in years?"));
+     floatDays = floatAge*365.25;
+     floatMonths = floatAge*12;
+     intWeeks= floatDays/7;
+     intFortnights= floatDays/14;
+     alert("You are" + floatAge + "Years old.");
+     alert("You are" + floatDays + "days old.");
+     alert("You are" + intWeeks + "weeks old.");
+     alert("You are" + intFortnights + "fortnights old.");
