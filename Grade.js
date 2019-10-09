@@ -10,37 +10,63 @@ var intGradeOption, floatTotalPts, floatHwPts, floatMidPts, floatFinPts, stringF
 
 floatHwPts = parseFloat(prompt("Please enter final HW pts (0-30):"));
 
-floatMidPts = parseFloat(prompt("Please enter midterm points"));
+floatMidPts = parseFloat(prompt("Please enter final Midterm Exam pts (0-35):"));
 
-floatFinPts = parseFloat(prompt("Please enter final points"));
+floatFinPts = parseFloat(prompt("Please enter final Final Exam pts (0-35):"));
 
-floatTotalPts = parseFloat(prompt("Please enter final class points"));
+floatTotalPts = parseFloat(floatHwPts+floatMidPts+floatFinPts);
 
-intGradeOption = parseInt(prompt("Enter 1 for pass/fail or press 2 for letter grade"));
+intGradeOption = parseInt(prompt("Please enter '1' for Pass/Fail, enter '2' for a letter grade (A-F):"));
 
-if (intGradeOption === 1) {
-    if (floatTotalPts >= 80)
-        stringFinalGrade = "Pass";
-    else
-        stringFinalGrade = "Fail";
-}
-if (intGradeOption === 2) {
-    if (floatTotalPts >= 90)
-        stringFinalGrade = "A";
-    else if (floatTotalPts >= 80)
+if (intGradeOption===1)
+{
+    if(floatTotalPts>= 80)
+    {
+        stringFinalGrade ="Pass";
+    }
+ else
+ { 
+    stringFinalGrade = "Fail";
+    }
+  }
+else
+{
+    if(floatTotalPts >= 90){
+    stringFinalGrade = "A";
+    }
+else
+{
+    if(floatTotalPts >= 80){
         stringFinalGrade = "B";
-    else if (floatTotalPts >= 70)
+    }
+else
+{
+    if(floatTotalPts >= 70){
         stringFinalGrade = "C";
-    else if (floatTotalPts >= 60)
-        stringFinalGrade = "D";
-    else
-        stringFinalGrade = "F";
+    }
+
+else
+{
+    if(floatTotalPts >= 60){
+        stringFinalGrade = "D"; 
+    }
+
+
+else
+{
+    if(floatTotalPts >= 50){
+       stringFinalGrade ="F";
+    }
+else
+{
+    if(floatTotalPts <=0){
+     stringFinalGrade ="F";
+    }
 }
+}
+}
+}
+}
+}    
 
-
-
-
-
-
-
-alert("Your final grade is: " + stringFinalGrade);
+alert("Your final grade is: " +stringFinalGrade);
