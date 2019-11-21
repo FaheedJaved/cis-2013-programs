@@ -30,8 +30,9 @@ var generate = function ()
             i = j;
             j = k;
         }
-        alert(stringOutput);
+    
     }
+    $("output").value = stringOutput;
 
 	// write whatever kind of loop you want, given the above info, to generate the appropriate
 	// number of fibonacci numbers and then post it to the html DOM 
